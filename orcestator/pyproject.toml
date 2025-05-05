@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "orcestator"
+version = "0.1.0"
+description = "Orchestrator proxy for LLM models with OpenAI-compatible API"
+authors = ["OleynikAleksandr <aoleynik@hydromax.com.ua>"]
+readme = "README.md"
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = ">=3.11,<4.0"
+fastchat = ">=0.2.24"
+httpx = "^0.27.0"
+sqlmodel = {version = "^0.0.16", optional = true}
+prometheus-client = "^0.20.0"
+python-dotenv = "^1.0.1"
+uvicorn = "^0.27.1"
+
+[tool.poetry.extras]
+sqlite = ["sqlmodel"]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
